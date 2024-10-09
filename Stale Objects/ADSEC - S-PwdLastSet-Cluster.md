@@ -1,41 +1,28 @@
----
-title: "Health Check Regel: Regelmäßige Passwortänderung für Cluster-Konten (S-PwdLastSet-Cluster)"
-date: 2024-10-09
-author: "Ivan Stricker <i.stricker@t-alpha.ch>"
-tags:
-  - ADSecurity
-  - Passwortänderung
-  - Cluster
-aliases:
-  - ADSEC - S-PwdLastSet-Cluster
-version: 1
-status: final
----
-
-# Regelmäßige Passwortänderung für Cluster-Konten (S-PwdLastSet-Cluster)
-
 <div style="text-align: right;">
   <img src="https://www.t-alpha.ch/wp-content/uploads/logo/TA-Logov2.svg" alt="Logo" style="width: 150px;">
 </div>
 
 ---
+
+## Regelmässige Passwortänderung für Cluster-Konten (S-PwdLastSet-Cluster)
+
+---
+
 ## Regelübersicht
 
-| **Regelname** | S-PwdLastSet-Cluster                                                                      |
-| ------------- | ------------------------------------------------------------------------------------ |
-| **Ziel**      | Überprüfen, ob alle Cluster-Konten regelmäßige Passwortänderungen durchführen
-|
-
+| **Regelname** | S-PwdLastSet-Cluster |
+| ------------- | --------------------- |
+| **Ziel**      | Überprüfen, ob alle Cluster-Konten regelmässige Passwortänderungen durchführen. |
 
 **Beschreibung**:
 
-Diese Regel stellt sicher, dass die regelmäßige Änderung der Passwörter für Cluster-Konten aktiv ist. Einige Cluster-Konten in Windows Server-Clustern haben seit über drei Jahren keine Passwortänderung durchgeführt, was auf fehlende Aktualisierungen der Geheimnisse hindeutet. Dies kann ein Sicherheitsrisiko darstellen, da veraltete Passwörter die Angriffsfläche erhöhen.
+Diese Regel stellt sicher, dass die regelmässige Änderung der Passwörter für Cluster-Konten aktiv ist. Einige Cluster-Konten in Windows Server-Clustern haben seit über drei Jahren keine Passwortänderung durchgeführt, was auf fehlende Aktualisierungen der Geheimnisse hindeutet. Dies kann ein Sicherheitsrisiko darstellen, da veraltete Passwörter die Angriffsfläche erhöhen.
 
 ---
 
 ## Einleitung
 
-Die regelmäßige Aktualisierung von Passwörtern für Cluster-Konten ist entscheidend für die Sicherheit einer Active Directory-Umgebung. Dieser Health Check überprüft, ob die Passwörter von Cluster-Konten ordnungsgemäß und in regelmäßigen Abständen geändert werden.
+Die regelmässige Aktualisierung von Passwörtern für Cluster-Konten ist entscheidend für die Sicherheit einer Active Directory-Umgebung. Dieser Health Check überprüft, ob die Passwörter von Cluster-Konten ordnungsgemäss und in regelmässigen Abständen geändert werden.
 
 ---
 
@@ -60,23 +47,19 @@ Der Algorithmus identifiziert Cluster-Konten anhand von drei Bedingungen:
 ### Schritte zur Umsetzung
 
 1. **Identifizieren der Cluster-Konten**:
-
    - Führen Sie ein Skript oder eine Abfrage aus, um alle Konten zu finden, die die oben genannten Bedingungen erfüllen.
 
 2. **Überprüfen der Passwortänderung**:
-
    - Prüfen Sie das Attribut `pwdLastSet` der identifizierten Konten.
    - Stellen Sie fest, ob das Passwort seit mehr als drei Jahren nicht geändert wurde.
 
 3. **Analyse der Cluster-Konfiguration**:
-
    - Untersuchen Sie die Cluster-Konfiguration und die Ereignisprotokolle, um festzustellen, warum das Passwort nicht aktualisiert wurde.
    - Überprüfen Sie, ob automatische Passwortänderungen konfiguriert sind und ob Fehler bei der Aktualisierung auftreten.
 
 4. **Aktualisierung der Passwörter**:
-
-   - Führen Sie eine manuelle Passwortänderung durch oder konfigurieren Sie den Cluster so, dass er Passwörter regelmäßig aktualisiert.
-   - Stellen Sie sicher, dass alle Änderungen ordnungsgemäß im System protokolliert werden.
+   - Führen Sie eine manuelle Passwortänderung durch oder konfigurieren Sie den Cluster so, dass er Passwörter regelmässig aktualisiert.
+   - Stellen Sie sicher, dass alle Änderungen ordnungsgemäss im System protokolliert werden.
 
    > **Hinweis**: Beachten Sie die Empfehlungen in der Microsoft-Dokumentation zur Konfiguration von AD-Konten für Failover-Clustering.
 
@@ -84,7 +67,7 @@ Der Algorithmus identifiziert Cluster-Konten anhand von drei Bedingungen:
 
 - **Kriterium 1**: Alle Cluster-Konten haben ein Passwort, das innerhalb der letzten drei Jahre geändert wurde.
 - **Kriterium 2**: Es gibt keine aktiven Cluster-Konten mit veralteten Passwörtern.
-- **Kriterium 3**: Die Cluster sind so konfiguriert, dass sie Passwörter regelmäßig aktualisieren.
+- **Kriterium 3**: Die Cluster sind so konfiguriert, dass sie Passwörter regelmässig aktualisieren.
 
 ---
 
@@ -99,7 +82,7 @@ Der Algorithmus identifiziert Cluster-Konten anhand von drei Bedingungen:
 > **Hinweis**:
 
 - Veraltete Passwörter für Cluster-Konten können ein erhebliches Sicherheitsrisiko darstellen.
-- Die regelmäßige Aktualisierung von Passwörtern hilft, unbefugten Zugriff zu verhindern und die Sicherheit der Cluster zu gewährleisten.
+- Die regelmässige Aktualisierung von Passwörtern hilft, unbefugten Zugriff zu verhindern und die Sicherheit der Cluster zu gewährleisten.
 - Überprüfen Sie die Cluster-Einstellungen und stellen Sie sicher, dass automatische Passwortaktualisierungen aktiviert sind.
 
 ---
