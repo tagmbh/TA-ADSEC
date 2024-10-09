@@ -1,17 +1,3 @@
----
-title: "Health Check Regel: Regelmäßige Passwortänderung für Cluster-Konten (S-PwdLastSet-Cluster)"
-date: 2024-10-09
-author: "Ivan Stricker <i.stricker@t-alpha.ch>"
-tags:
-  - ADSecurity
-  - Passwortänderung
-  - Cluster
-aliases:
-  - ADSEC - S-PwdLastSet-Cluster
-version: 1
-status: final
----
-
 # Regelmäßige Passwortänderung für Cluster-Konten (S-PwdLastSet-Cluster)
 
 <div style="text-align: right;">
