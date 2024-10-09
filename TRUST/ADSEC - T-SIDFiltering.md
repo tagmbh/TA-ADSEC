@@ -1,15 +1,3 @@
----
-date: 2024-10-09
-author: Ivan Stricker <i.stricker@t-alpha.ch>
-tags:
-  - ADSecurity
-  - SIDFiltering
-aliases:
-  - ADSEC - T-SIDFiltering
-version: 1
-status: final
----
-
 <div style="text-align: right;">
   <img src="https://www.t-alpha.ch/wp-content/uploads/logo/TA-Logov2.svg" alt="Logo" style="width: 150px;">
 </div>
