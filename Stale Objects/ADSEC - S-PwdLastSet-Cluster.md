@@ -28,7 +28,6 @@ status: final
 
 
 **Beschreibung**:
-
 Diese Regel stellt sicher, dass die regelmäßige Änderung der Passwörter für Cluster-Konten aktiv ist. Einige Cluster-Konten in Windows Server-Clustern haben seit über drei Jahren keine Passwortänderung durchgeführt, was auf fehlende Aktualisierungen der Geheimnisse hindeutet. Dies kann ein Sicherheitsrisiko darstellen, da veraltete Passwörter die Angriffsfläche erhöhen.
 
 ---
