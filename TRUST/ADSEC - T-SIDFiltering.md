@@ -9,7 +9,6 @@ aliases:
 version: 1
 status: final
 ---
-# SID-Filterung (T-SIDFiltering)
 
 <div style="text-align: right;">
   <img src="https://www.t-alpha.ch/wp-content/uploads/logo/TA-Logov2.svg" alt="Logo" style="width: 150px;">
